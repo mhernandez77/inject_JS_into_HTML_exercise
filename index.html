@@ -1,0 +1,43 @@
+<!--TWO DIFF SCRIPT CODES-->
+
+<html>
+
+
+  <script>
+//can tell it to wait until everything has been loaded in.
+// The command for that is 'window.onload'. We say '= function()'. And what this is going to do, it's
+//fxn is ran once everything is loaded.
+//  And what is going to happen, is it sees this window.onload and says, This won't be executed until
+// everything down here has loaded
+    window.onload = function () {
+      const slot = document.getElementById("tag1");
+      //Time gets injected
+      var time = 100;
+      //we will have a fxn get time
+      var getTime= ()=>{
+        time = time - 1;
+        slot.innerHTML = "Hello World, here's a timer countdown from " + time + ` secs`;
+      }
+    //  have a timer called setInterval
+      setInterval(getTime, 500);
+    };
+  </script>
+
+
+<!--Beware of order of code being executed before code becomes into existance!!-->
+
+  <body>
+    <div>
+      <h1 id="tag1">Hello Earthling</h1>
+    </div>
+  </body>
+
+<!--<script>-->
+<!--// First we entered a script tag & get ahold of element by id&ndash;&gt;-->
+<!--  const tag = document.getElementById('tag1')-->
+<!--//we can modify the inner HTML-->
+<!--//hello... -> goodbye ...-->
+<!--tag.innerHTML = 'Goodbye Aliens'-->
+<!--</script>-->
+
+</html>
